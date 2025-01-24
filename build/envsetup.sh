@@ -26,7 +26,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
-        mka bacon
+        mka aeon
     else
         echo "No such item in brunch menu. Try 'breakfast'"
         return 1
@@ -64,7 +64,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/PixelOS-*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/AeonOS-*.zip | tail -1`
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
@@ -279,7 +279,7 @@ function githubremote()
 
     local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
 
-    git remote add github https://github.com/PixelOS-AOSP/$PROJECT
+    git remote add github https://github.com/AeonOS-AOSP/$PROJECT
     echo "Remote 'github' created"
 }
 
@@ -383,7 +383,7 @@ function cmka() {
     if [ ! -z "$1" ]; then
         for i in "$@"; do
             case $i in
-                bacon|otapackage|systemimage)
+                aeon|otapackage|systemimage)
                     mka installclean
                     mka $i
                     ;;

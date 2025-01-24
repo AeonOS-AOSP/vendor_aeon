@@ -10,7 +10,7 @@ $(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
 # PixelLauncher overlays
 $(call inherit-product-if-exists, vendor/google/overlays/ThemeIcons/config.mk)
 
-PRODUCT_BRAND ?= PixelOS
+PRODUCT_BRAND ?= AeonOS
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
